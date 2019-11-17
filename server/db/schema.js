@@ -27,8 +27,15 @@ const typeDefs = `
     content: String!
   }
 
+  input updateNoteInput {
+    title: String!
+    content: String!
+  }
+
+
   type Mutation {
     createNote(input: NoteInput):Note
+    updateNote(id:ID! , input:updateNoteInput):Note
   }
 `;
 const schema = makeExecutableSchema({
