@@ -21,6 +21,7 @@
         "graphql-yoga": "^1.18.3",
         "mongoose": "^5.7.9",
         "nodemon": "^1.19.4",
+        "react-router-dom": "^5.1.2",
         "save-dev": "0.0.1-security"
     }
 }

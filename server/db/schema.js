@@ -6,6 +6,7 @@ mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/notetaking_db', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  useFindAndModify: false,
 });
 
 const typeDefs = `
@@ -36,6 +37,7 @@ const typeDefs = `
   type Mutation {
     createNote(input: NoteInput):Note
     updateNote(id:ID! , input:updateNoteInput):Note
+    deleteNote(id:ID):Note
   }
 `;
 const schema = makeExecutableSchema({
